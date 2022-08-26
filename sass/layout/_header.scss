@@ -5,12 +5,21 @@
         rgba($color-primery-light, 0.8),
         rgba($color-primery-dark, 0.8)
       ),
-      url(/img/hero.jpg);
+      url(../img/hero-1.jpg);
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  
+ 
+@include respond(phone){
+
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+}
+
+
     &__logo-box {
       position: absolute;
       top: 4rem;
@@ -18,7 +27,7 @@
       animation-name: moveInleft;
       animation-duration: 3s;
       animation-timing-function: ease-out;
-      animation-iteration-count: 3;
+      animation-iteration-count: 1;
     }
   
     &__logo {
