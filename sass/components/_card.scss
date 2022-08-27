@@ -17,7 +17,7 @@ left: 0;
 top: 0;
 width: 100%;
 backface-visibility:hidden;
-
+-webkit-backface-visibility:hidden;
 border-radius: 3px;
 overflow: hidden;
 box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -186,18 +186,19 @@ text-transform: uppercase;
     
 }
 
-@include respond(tab-port){
-
+   //@include respond(tab-port){
+    @media only screen and (max-width:56.25em),
+    only screen and (hover:none) {
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
    background-color: $color-white;
     height: auto;
-    
+    border-radius: 3px;
     &__side{
         
        
         height: auto;
         position: relative;
-    border-radius: 3px;
+   
    box-shadow: none;
     
    &__details{

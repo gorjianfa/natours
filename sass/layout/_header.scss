@@ -1,16 +1,54 @@
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primery-light, 0.8),
-        rgba($color-primery-dark, 0.8)
-      ),
-      url(../img/hero-1.jpg);
-    background-size: cover;
-    background-position: top;
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primery-light, 0.8),
+      rgba($color-primery-dark, 0.8)),
+  url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+
+    
+   @supports (clip-path: polygon(0 0))  or ( -webkit-clip-path: polygon(0 0)) {
+
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
  
+ height: 95vh;
+
+   }
+
+
+
+
+
+
+
+
+
+@media only screen and (main-resolution:192dpi) and (main-width:37.5em),
+only screen and 
+(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+only screen and 
+(main-width:125em)
+{
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primery-light, 0.8),
+    rgba($color-primery-dark, 0.8)
+  ),
+  url(../img/hero-1.jpg);
+
+
+
+}
+
+
+
+
 @include respond(phone){
 
 
@@ -29,6 +67,7 @@
       animation-timing-function: ease-out;
       animation-iteration-count: 1;
     }
+  
   
     &__logo {
       height: 3.5rem;

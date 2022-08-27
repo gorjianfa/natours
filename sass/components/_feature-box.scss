@@ -17,7 +17,8 @@ padding: 2rem;
 
         font-size: 6rem;
         margin-bottom: .5rem;
-
+ color: $color-primery-light;
+    
         @include respond(tab-port){
 
             margin-bottom: 0;
